@@ -8,6 +8,7 @@ exports.connect = () => {
 		.connect(MONGODB_URL, {
 			useNewUrlparser: true,
 			useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 10000,
 		})
 		.then(console.log(`DB ka Connection Success`))
 		.catch((err) => {
